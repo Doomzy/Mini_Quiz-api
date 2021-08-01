@@ -29,6 +29,8 @@ class CreateQuestionSerializer(serializers.ModelSerializer):
         ]
 
 class SubjectSerializer(serializers.ModelSerializer):
+    
+        academic_year= serializers.ChoiceField(choices=Subject.ayChoices)
 
     class Meta:
         model= Subject
